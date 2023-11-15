@@ -17,4 +17,16 @@ Project sequence diagram:
 7. [2023-11-10] - Introduction to Remix and Solidity - https://www.youtube.com/watch?v=leWJ-djjwjU
 8. [2023-11-11] - Building Cross Chain dApps Using CCIP - https://www.youtube.com/watch?v=Dvna-eEQEsQ
 9. [2023-11-14] - Deep Dive Into Chainlink Functions - https://www.youtube.com/watch?v=vt0OuOm4-aY
-10. [2023-11-08] -  - 
+10. [2023-11-15] -  -
+11. [2023-11-15] -  -
+12. [2023-11-16] -  -
+13. [2023-11-16] -  -
+14. [2023-11-20] -  -
+15. [2023-11-20] -  -
+16. [2023-11-21] -  -
+17. [2023-11-21] -  -
+18. [2023-11-22] -  -
+19. [2023-11-22] -  -
+20. [2023-11-22] -  -
+21. [2023-11-27] -  -
+22. [2023-11-30] -  - 

@@ -4,7 +4,7 @@
 2. Devpost Project: https://devpost.com/software/gaia-sustainability
 
 Project sequence diagram:
-![Project Sequence Diagram](http://url/to/img.png)
+
+![Project Sequence Diagram](https://github.com/Gaia-Sustainability/chainlink-constellation-hackathon/blob/main/project_sequence_diagram.png)
 
 ## Chainlink Youtube Videos Guides
-   

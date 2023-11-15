@@ -30,4 +30,4 @@ Project sequence diagram:
 19. [ 2023-11-22 ] - Full-Stack Web3 Development with The Graph - https://www.youtube.com/watch?v=B551dyO3awA
 20. [ 2023-11-22 ] - What Venture Funds is looking for in Hackathons - https://www.youtube.com/watch?v=SOYEAjMPVYo
 21. [ 2023-11-27 ] - How To Submit and Pitch a Hackathon Project - https://www.youtube.com/watch?v=3-IljWcQ2SE
-22. [ 2023-11-30 ] - Closing Ceremony - https://www.youtube.com/watch?v=gTt6mVfUCqM
+22. [ 2023-12-20 ] - Closing Ceremony - https://www.youtube.com/watch?v=gTt6mVfUCqM

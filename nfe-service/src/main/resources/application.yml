@@ -1,0 +1,23 @@
+---
+
+server:
+  port: 7000
+  shutdown: graceful
+  http2:
+    enabled: true
+
+spring:
+  application:
+    name: nfe
+  config:
+    import: optional:file:./local-environments.properties
+  data:
+    mongodb:
+      uri: ${MONGODB_DATABASE_URL:mongodb://localhost:27017/nfe-service}
+      uuid-representation: standard
+      auto-index-creation: true
+  docker:
+    compose:
+      lifecycle-management: start-only
+springdoc:
+  pathsToMatch: /v1/api/**

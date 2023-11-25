@@ -1,8 +1,9 @@
 package br.com.i3focus.nfe.service.domain.nfe.entity
 
 import br.com.i3focus.nfe.service.domain.nfe.entity.type.NfeType
-import br.com.i3focus.nfe.service.domain.nfe.entity.vo.Company
-import br.com.i3focus.nfe.service.domain.nfe.entity.vo.Product
+import br.com.i3focus.nfe.service.domain.nfe.entity.dto.Company
+import br.com.i3focus.nfe.service.domain.nfe.entity.dto.Product
+import jakarta.validation.constraints.NotEmpty
 import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Size
 import java.time.OffsetDateTime
@@ -32,10 +33,17 @@ class Nfe {
     var number: Long? = null
 
     @NotNull
+    var type: NfeType? = null
+
+    @NotNull
     var issuedOn: OffsetDateTime? = null
 
     @NotNull
-    var type: NfeType? = null
+    var company: Company? = null
+
+    @NotNull
+    @NotEmpty
+    var products: List<Product>? = null
 
     @CreatedDate
     var dateCreated: OffsetDateTime? = null
@@ -45,9 +53,4 @@ class Nfe {
 
     @Version
     var version: Int? = null
-
-    var company: Company? = null
-
-    var products: List<Product>? = null
-
 }

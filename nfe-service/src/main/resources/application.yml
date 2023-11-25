@@ -7,17 +7,27 @@ server:
     enabled: true
 
 spring:
+  devtools:
+    add-properties: false
   application:
     name: nfe
   config:
-    import: optional:file:./local-environments.properties
+    import: optional:file:./environments.properties
+  jackson:
+    property-naming-strategy: SNAKE_CASE
   data:
     mongodb:
-      uri: ${MONGODB_DATABASE_URL:mongodb://localhost:27017/nfe-service}
+      uri: ${MONGODB_DATABASE_URL}
       uuid-representation: standard
       auto-index-creation: true
-  docker:
-    compose:
-      lifecycle-management: start-only
+#  docker:
+#    compose:
+#      lifecycle-management: START_AND_STOP
+
+management:
+  endpoint:
+    info:
+      enabled: true
+
 springdoc:
   pathsToMatch: /v1/api/**

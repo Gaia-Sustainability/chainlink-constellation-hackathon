@@ -30,14 +30,14 @@ class RestExceptionHandler {
             ResponseEntity<ErrorResponse> {
         val bindingResult: BindingResult = exception.bindingResult
         val fieldErrors: List<FieldError> = bindingResult.fieldErrors
-                .stream()
-                .map { error ->
-                    var fieldError = FieldError()
-                    fieldError.errorCode = error.code
-                    fieldError.field = error.field
-                    fieldError
-                }
-                .toList()
+            .stream()
+            .map { error ->
+                var fieldError = FieldError()
+                fieldError.errorCode = error.code
+                fieldError.field = error.field
+                fieldError
+            }
+            .toList()
         val errorResponse = ErrorResponse()
         errorResponse.httpStatus = HttpStatus.BAD_REQUEST.value()
         errorResponse.exception = exception::class.simpleName
@@ -61,10 +61,12 @@ class RestExceptionHandler {
     )
     fun handleThrowable(exception: Throwable): ResponseEntity<ErrorResponse> {
         exception.printStackTrace()
-        val errorResponse = ErrorResponse()
-        errorResponse.httpStatus = HttpStatus.INTERNAL_SERVER_ERROR.value()
-        errorResponse.exception = exception::class.simpleName
+        val errorResponse = ErrorResponse().apply {
+            this.httpStatus = HttpStatus.INTERNAL_SERVER_ERROR.value()
+            this.exception = exception::class.simpleName
+            this.message = exception.message
+        }
+
         return ResponseEntity(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR)
     }
-
 }

@@ -1,6 +1,7 @@
-package br.com.i3focus.nfe.service.application.web.dto.request
+package br.com.i3focus.nfe.service.domain.nfe.entity.dto
 
 import br.com.i3focus.nfe.service.domain.nfe.entity.type.NfeType
+import jakarta.validation.constraints.NotEmpty
 import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Size
 import java.time.OffsetDateTime
@@ -21,9 +22,17 @@ class NfeDTO {
     var number: Long? = null
 
     @NotNull
-    var issuedOn: OffsetDateTime? = null
-
-    @NotNull
     var type: NfeType? = null
 
+    @NotNull
+    var issuedOn: OffsetDateTime? = null
+
+    var dateCreated: OffsetDateTime? = null
+
+    @NotNull
+    var company: Company? = null
+
+    @NotNull
+    @NotEmpty
+    var products: List<Product>? = null
 }

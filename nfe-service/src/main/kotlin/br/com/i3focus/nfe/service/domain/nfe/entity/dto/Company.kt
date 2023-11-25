@@ -1,4 +1,4 @@
-package br.com.i3focus.nfe.service.domain.nfe.entity.vo
+package br.com.i3focus.nfe.service.domain.nfe.entity.dto
 
 import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Size
@@ -14,11 +14,13 @@ class Company {
 
     var address: Address? = null
 
-    sealed class Address {
-
-        @NotNull
-        @Size(max = 255)
+    class Address {
         var street: String? = null
-
+        var number: Int? = null
+        var neighborhood: String? = null
+        var city: String? = null
+        var state: String? = null
+        var zipCode: String? = null
+        var country: String? = null
     }
 }

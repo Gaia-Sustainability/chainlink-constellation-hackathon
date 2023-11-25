@@ -35,6 +35,9 @@ environment variable when running the container.
 gradlew bootBuildImage --imageName=br.com.i3focus.nfe/nfe-service
 ```
 
+## Running on Heroku
+https://www.tabnews.com.br/jjeanjacques10/spring-boot-microservices-monorepo-heroku
+
 ## Further readings
 
 * [Gradle user manual](https://docs.gradle.org/)  

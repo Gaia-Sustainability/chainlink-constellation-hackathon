@@ -1,1 +1,1 @@
-web: java -jar build/libs/nfe-service.jar --server.port=$PORT
+web: java -jar build/libs/nfe-service-1.0.0.jar --server.port=$PORT

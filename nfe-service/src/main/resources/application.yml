@@ -12,7 +12,9 @@ spring:
   application:
     name: nfe
   config:
-    import: optional:file:./environments.properties
+    import:
+      - classpath:app.yml
+      - optional:file:./environments.properties
   jackson:
     property-naming-strategy: SNAKE_CASE
   data:
@@ -20,6 +22,11 @@ spring:
       uri: ${MONGODB_DATABASE_URL}
       uuid-representation: standard
       auto-index-creation: true
+  task:
+    scheduling:
+      thread-name-prefix: nfe-service-scheduling-
+      pool:
+        size: 10
 #  docker:
 #    compose:
 #      lifecycle-management: START_AND_STOP

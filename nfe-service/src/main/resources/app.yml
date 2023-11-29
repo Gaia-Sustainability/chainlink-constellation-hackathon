@@ -1,0 +1,7 @@
+---
+
+app:
+  jobs:
+    enabled: "true"
+    cron: 0 0/30 * * * *
+    zone: "America/Sao_Paulo"

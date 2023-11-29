@@ -14,6 +14,7 @@ class NfeDTOMapper : Mapper<Nfe, NfeDTO> {
             number = input.number
             issuedOn = input.issuedOn
             type = input.type
+            dateCreated = input.dateCreated
             company = input.company
             products = input.products
         }

@@ -38,3 +38,13 @@ management:
 
 springdoc:
   pathsToMatch: /v1/api/**
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+    root: INFO

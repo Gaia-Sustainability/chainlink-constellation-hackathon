@@ -38,6 +38,10 @@ class NfeResource(
     fun getNfe(@PathVariable(name = "id") id: UUID): ResponseEntity<NfeDTO> =
         ResponseEntity.ok(nfeService.get(id))
 
+    @GetMapping("/ncm/{ncm}")
+    fun getNfesWithProductNcm(@PathVariable(name = "ncm") ncm: Long): ResponseEntity<List<NfeDTO>> =
+        ResponseEntity.ok(nfeService.findByProductNcm(ncm))
+
     @PostMapping
     @ApiResponse(responseCode = "201")
     fun createNfe(@RequestBody @Valid nfeDTO: NfeDTO): ResponseEntity<NfeCreatedResponse> =

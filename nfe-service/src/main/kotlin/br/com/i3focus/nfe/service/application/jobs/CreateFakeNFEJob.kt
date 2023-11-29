@@ -67,7 +67,7 @@ class CreateFakeNFEJob {
                     code = "B17025056_${faker.number().digits(8)}"
                     ean = "7891117059356"
                     ncm = 44011000 // https://cosmos.bluesoft.com.br/produtos/7891117059356-lenha-ecologica
-                    unity = "Pack"
+                    unity = "Kg"
                     quantity = Random.nextInt(1, 9999)
                     price = BigDecimal("30.00")
                     amount = price?.multiply(BigDecimal(quantity!!))

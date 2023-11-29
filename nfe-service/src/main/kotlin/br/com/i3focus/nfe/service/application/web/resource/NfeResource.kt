@@ -1,5 +1,6 @@
 package br.com.i3focus.nfe.service.application.web.resource
 
+import br.com.i3focus.nfe.service.application.web.dto.response.NfeCalculatedCarbonFreeResponse
 import br.com.i3focus.nfe.service.application.web.dto.response.NfeCreatedResponse
 import br.com.i3focus.nfe.service.domain.nfe.NfeService
 import br.com.i3focus.nfe.service.domain.nfe.entity.dto.NfeDTO
@@ -39,8 +40,34 @@ class NfeResource(
         ResponseEntity.ok(nfeService.get(id))
 
     @GetMapping("/ncm/{ncm}")
-    fun getNfesWithProductNcm(@PathVariable(name = "ncm") ncm: Long): ResponseEntity<List<NfeDTO>> =
-        ResponseEntity.ok(nfeService.findByProductNcm(ncm))
+    fun getNfesWithProductNcm(
+        @PageableDefault(
+            size = 10,
+            page = 0,
+            sort = ["dateCreated"],
+            direction = Sort.Direction.DESC
+        )
+        pageable: Pageable,
+        @PathVariable(name = "ncm") ncm: Long
+    ): ResponseEntity<List<NfeDTO>> =
+        ResponseEntity.ok(nfeService.findByProductNcm(ncm, pageable))
+
+    @GetMapping("/ncm/{ncm}/carbon-free-calculation")
+    fun getNfesWithProductNcmAndCalculateCarbonFree(
+        @PageableDefault(
+            size = 1,
+            page = 0,
+            sort = ["dateCreated"],
+            direction = Sort.Direction.DESC
+        )
+        pageable: Pageable,
+        @PathVariable(name = "ncm") ncm: Long
+    ): ResponseEntity<List<NfeCalculatedCarbonFreeResponse>> =
+        nfeService.findByProductNcm(ncm, pageable)
+            .map { NfeCalculatedCarbonFreeResponse.from(it) }
+            .let {
+                return ResponseEntity.ok(it)
+            }
 
     @PostMapping
     @ApiResponse(responseCode = "201")

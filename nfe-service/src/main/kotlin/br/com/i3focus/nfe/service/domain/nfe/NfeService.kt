@@ -45,9 +45,10 @@ class NfeService(private val nfeRepository: NfeRepository) {
 
     fun numberExists(number: Long): Boolean = nfeRepository.existsByNumber(number)
 
-    fun findByProductNcm(ncm: Long): List<NfeDTO> = nfeRepository.findByProducts_Ncm(ncm).map {
-        dtoMapper.mapFrom(it, NFE_NULL)
-    }
+    fun findByProductNcm(ncm: Long, pageable: Pageable): List<NfeDTO> =
+        nfeRepository.findByProducts_Ncm(ncm, pageable).map {
+            dtoMapper.mapFrom(it, NFE_NULL)
+        }
 
     companion object {
         private val NFE_NULL = null

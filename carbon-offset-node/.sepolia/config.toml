@@ -1,0 +1,17 @@
+[Log]
+Level = 'warn'
+
+[WebServer]
+AllowOrigins = '\*'
+SecureCookies = false
+
+[WebServer.TLS]
+HTTPSPort = 0
+
+[[EVM]]
+ChainID = '80001'
+
+[[EVM.Nodes]]
+Name = 'Sepolia'
+WSURL = 'wss://polygon-mumbai.g.alchemy.com/v2/KJNNaI4fr2-XuW876bcCIJyfLxm9si2m'
+HTTPURL = 'https://polygon-mumbai.g.alchemy.com/v2/KJNNaI4fr2-XuW876bcCIJyfLxm9si2m'

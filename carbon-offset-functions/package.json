@@ -1,0 +1,30 @@
+{
+  "name": "carbon-offset-functions",
+  "version": "1.0.0",
+  "description": "Carbon Offset Calculations",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaia-Sustainability/chainlink-constellation-hackathon.git"
+  },
+  "keywords": [
+    "smartcontract",
+    "chainlink",
+    "functions",
+    "web3",
+    "api"
+  ],
+  "author": "jether@i3focus.com.br",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gaia-Sustainability/chainlink-constellation-hackathon/issues"
+  },
+  "homepage": "https://github.com/Gaia-Sustainability/chainlink-constellation-hackathon#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.2"
+  }
+}

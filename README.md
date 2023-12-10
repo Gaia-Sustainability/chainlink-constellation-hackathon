@@ -50,7 +50,8 @@ We have created the following subscriptions:
 
 ## NFE Service
 We have built a service to generate a fake Brazil electronic fiscal document that represents a purchase that some company made, and for the Gaia Carbon project, the purchases were related to a Wood for burn and the NCM `44011000` (universal product number) was used to filter only specific product that the project will use in a real project.
-Bellow, some `curl` commands example to see the project in the production:
+
+Bellow, some `curl` commands example to see the API's in the production:
 1. Get NFE's:
 ```shell
 curl 'https://nfe-service-hackathon-e1676ada9c11.herokuapp.com/v1/api/nfes' \

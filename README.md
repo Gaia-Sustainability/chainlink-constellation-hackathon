@@ -9,6 +9,8 @@
 7. Chainlink node on Moonbeam: https://docs.moonbeam.network/node-operators/oracle-nodes/node-chainlink/
 
 # Gaia Carbon Project
+All blockchain dependencies for this project were deployed or configured on the Polygon Mumbai network.
+
 ## Project architecture diagram:
 
 ![Project Sequence Diagram](https://github.com/Gaia-Sustainability/chainlink-constellation-hackathon/blob/main/gaia_hackathon.png)
@@ -18,7 +20,7 @@
 
 2. Install NPM and Node > v 17
 
-3. Create an Alchemy account, create an app and get the keys
+3. Create an Alchemy account, create an app, and get the keys
 
 4. The following environment variables should be readily available (check the `env.example` file to see which ones you will need and what name they are given):
 
@@ -37,12 +39,29 @@ Set your environment variables using the `env-enc` package included.
 **Note** Each time you open a fresh terminal or restart a terminal session you will need to run `npx env-enc set-pw` but not the other steps.
 
 ## Contracts
+We have deployed the Gaia Carbon Functions Consumer contract: https://mumbai.polygonscan.com/address/0x0dc1b5cb19095bb39c6740615a2995eb67226955, and Gaia Carbon NFT: https://mumbai.polygonscan.com/address/0x83CDA4fee13B2e7F59186013035E00de0eAD8d3A
 
 ## Subscriptions
+We have created the following subscriptions:
+1. Chainlink VRF: https://vrf.chain.link/mumbai/6675
+2. Chainlink Functions: https://functions.chain.link/mumbai/1079
 
 ## NFE Service
+We have built a service to generate a fake Brazil electronic fiscal document that represents a purchase that some company made, and for the Gaia Carbon project, the purchases were related to a Wood for burn and the NCM `44011000` (universal product number).
+Bellow, some `curl` commands example to see the project in the production:
+1. Get NFE's:
+```shell
+curl 'https://nfe-service-hackathon-e1676ada9c11.herokuapp.com/v1/api/nfes' \
+  -H 'Accept: application/json'
+```
+2. Get the newest generated NFE for some company:
+```shell
+curl 'https://nfe-service-hackathon-e1676ada9c11.herokuapp.com/v1/api/nfes/ncm/44011000/carbon-free-calculation' \
+  -H 'Accept: application/json'
+```
 
 ## OpenSea NFT Marketplace
+The minted NFTs have been displayed on the OpenSea marketplace for the Gaia account: https://testnets.opensea.io/GaiaSustainability
 
 # Chainlink Constellation Hackathon
 ## Chainlink Youtube Videos Guides

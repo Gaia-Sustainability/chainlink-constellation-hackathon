@@ -4,9 +4,9 @@
 2. Devpost Project: https://devpost.com/software/gaia-sustainability
 3. About hackathon: https://chain.link/hackathon
 4. Chainlink docs: https://docs.chain.link/chainlink-nodes/v1/node-config
-4.1 Help to create the node: https://www.blockmeadow.com/how-to-deploy-a-chainlink-node/
-5. Chainlink node on AWS: https://aws-ia.github.io/cfn-ps-chainlinklabs-chainlink-node/
-6. Chainlink node on Moonbeam: https://docs.moonbeam.network/node-operators/oracle-nodes/node-chainlink/
+  4.1 Help to create the node: https://www.blockmeadow.com/how-to-deploy-a-chainlink-node/
+6. Chainlink node on AWS: https://aws-ia.github.io/cfn-ps-chainlinklabs-chainlink-node/
+7. Chainlink node on Moonbeam: https://docs.moonbeam.network/node-operators/oracle-nodes/node-chainlink/
 
 Project architecture diagram:
 

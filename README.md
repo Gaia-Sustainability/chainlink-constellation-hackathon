@@ -8,9 +8,9 @@
 5. Chainlink node on AWS: https://aws-ia.github.io/cfn-ps-chainlinklabs-chainlink-node/
 6. Chainlink node on Moonbeam: https://docs.moonbeam.network/node-operators/oracle-nodes/node-chainlink/
 
-Project sequence diagram:
+Project architecture diagram:
 
-![Project Sequence Diagram](https://github.com/Gaia-Sustainability/chainlink-constellation-hackathon/blob/main/project_sequence_diagram.png)
+![Project Sequence Diagram](https://github.com/Gaia-Sustainability/chainlink-constellation-hackathon/blob/main/gaia_hackathon.png)
 
 ## Chainlink Youtube Videos Guides
 1. [ 2023-11-08 ] - Opening Ceremony | Constellation - https://www.youtube.com/watch?v=nqdJD6roPhw

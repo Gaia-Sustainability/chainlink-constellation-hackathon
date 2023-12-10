@@ -8,10 +8,43 @@
 6. Chainlink node on AWS: https://aws-ia.github.io/cfn-ps-chainlinklabs-chainlink-node/
 7. Chainlink node on Moonbeam: https://docs.moonbeam.network/node-operators/oracle-nodes/node-chainlink/
 
-Project architecture diagram:
+# Gaia Carbon Project
+## Project architecture diagram:
 
 ![Project Sequence Diagram](https://github.com/Gaia-Sustainability/chainlink-constellation-hackathon/blob/main/gaia_hackathon.png)
 
+## Setup
+1. Metamask funded with LINK tokens - [fund here.](faucets.chain.link). Also, ensure you have enough test Mumbai Matic
+
+2. Install NPM and Node > v 17
+
+3. Create an Alchemy account, create an app and get the keys
+
+4. The following environment variables should be readily available (check the `env.example` file to see which ones you will need and what name they are given):
+
+```
+The following ENV VARIABLE values
+ALCHEMY_WSS_URL=
+ALCHEMY_RPC_URL=
+PRIVATE_KEY=
+```
+
+Set your environment variables using the `env-enc` package included.  
+1. Set password (this password will be used to encrypt the environment variables and decrypt too) with `npx env-enc set-pw`. Remember this password otherwise you will have to set the env vars each time!
+2. Set the above-mentioned env vars with `npx env-enc set` ...and then follow the prompts
+3. After you set all the env vars, you can view the decrypted, human-readable version by running `npx env-enc view`
+
+**Note** Each time you open a fresh terminal or restart a terminal session you will need to run `npx env-enc set-pw` but not the other steps.
+
+## Contracts
+
+## Subscriptions
+
+## NFE Service
+
+## OpenSea NFT Marketplace
+
+# Chainlink Constellation Hackathon
 ## Chainlink Youtube Videos Guides
 1. [ 2023-11-08 ] - Opening Ceremony | Constellation - https://www.youtube.com/watch?v=nqdJD6roPhw
 2. [ 2023-11-08 ] - Gear Up for Constellation: A Chainlink Hackathon - https://www.youtube.com/watch?v=Qhj_SQYaMEw

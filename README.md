@@ -39,7 +39,9 @@ Set your environment variables using the `env-enc` package included.
 **Note** Each time you open a fresh terminal or restart a terminal session you will need to run `npx env-enc set-pw` but not the other steps.
 
 ## Contracts
-We have deployed the Gaia Carbon Functions Consumer contract: https://mumbai.polygonscan.com/address/0x0dc1b5cb19095bb39c6740615a2995eb67226955, and Gaia Carbon NFT: https://mumbai.polygonscan.com/address/0x83CDA4fee13B2e7F59186013035E00de0eAD8d3A
+We have deployed some contracts, we give the smart contracts address to make it possible see them on the Mumbai network scan: 
+1. Gaia Carbon Functions Consumer: https://mumbai.polygonscan.com/address/0x0dc1b5cb19095bb39c6740615a2995eb67226955
+2. Gaia Carbon NFT: https://mumbai.polygonscan.com/address/0x83CDA4fee13B2e7F59186013035E00de0eAD8d3A
 
 ## Subscriptions
 We have created the following subscriptions:

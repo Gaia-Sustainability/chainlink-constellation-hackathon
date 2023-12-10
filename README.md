@@ -49,7 +49,7 @@ We have created the following subscriptions:
 2. Chainlink Functions: https://functions.chain.link/mumbai/1079
 
 ## NFE Service
-We have built a service to generate a fake Brazil electronic fiscal document that represents a purchase that some company made, and for the Gaia Carbon project, the purchases were related to a Wood for burn and the NCM `44011000` (universal product number).
+We have built a service to generate a fake Brazil electronic fiscal document that represents a purchase that some company made, and for the Gaia Carbon project, the purchases were related to a Wood for burn and the NCM `44011000` (universal product number) was used to filter only specific product that the project will use in a real project.
 Bellow, some `curl` commands example to see the project in the production:
 1. Get NFE's:
 ```shell

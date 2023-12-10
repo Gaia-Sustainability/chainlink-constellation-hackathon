@@ -14,7 +14,7 @@
 ![Project Sequence Diagram](https://github.com/Gaia-Sustainability/chainlink-constellation-hackathon/blob/main/gaia_hackathon.png)
 
 ## Setup
-1. Metamask funded with LINK tokens - [fund here.](faucets.chain.link). Also, ensure you have enough test Mumbai Matic
+1. Metamask funded with LINK tokens - ([faucets.chain.link](https://faucets.chain.link/mumbai)). Also, ensure you have enough test Mumbai Matic
 
 2. Install NPM and Node > v 17
 
